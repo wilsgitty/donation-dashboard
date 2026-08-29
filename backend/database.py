@@ -7,11 +7,11 @@ from pathlib import Path
 
 load_dotenv()
 
-DB_USER = os.getenv("DB_USER")
-DB_PASSWORD = os.getenv("DB_PASSWORD")
-DB_HOST = os.getenv("DB_HOST")
-DB_PORT = os.getenv("DB_PORT")
-DB_NAME = os.getenv("DB_NAME")
+DB_USER = os.getenv("MYSQLUSER") or os.getenv("DB_USER")
+DB_PASSWORD = os.getenv("MYSQLPASSWORD") or os.getenv("MYSQL_ROOT_PASSWORD") or os.getenv("DB_PASSWORD")
+DB_HOST = os.getenv("MYSQLHOST") or os.getenv("DB_HOST")
+DB_PORT = os.getenv("MYSQLPORT") or os.getenv("DB_PORT")
+DB_NAME = os.getenv("MYSQLDATABASE") or os.getenv("MYSQL_DATABASE") or os.getenv("DB_NAME")
 
 from urllib.parse import quote_plus
 
