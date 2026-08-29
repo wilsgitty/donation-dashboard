@@ -1,7 +1,9 @@
 import os
-from dotenv import load_dotenv # type: ignore
-from sqlalchemy import create_engine # type: ignore
-from sqlalchemy.orm import sessionmaker, declarative_base # type: ignore
+from dotenv import load_dotenv
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker, declarative_base
+from urllib.parse import quote_plus
+from pathlib import Path
 
 load_dotenv()
 
