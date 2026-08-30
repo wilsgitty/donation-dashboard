@@ -5,7 +5,6 @@ import models
 from routers import donors, donations, campaigns, dashboard
 
 app = FastAPI()
-
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
