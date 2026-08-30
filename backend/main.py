@@ -9,7 +9,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
-        "https://https://donation-dashboard-umber.vercel.app",
+        "https://donation-dashboard-umber.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
