@@ -19,7 +19,7 @@ function App() {
   useEffect(() => {
     const fetchData = () => {
       axios
-        .get("http://127.0.0.1:8000/dashboard/summary")
+        .get("https://donation-dashboard-production.up.railway.app/dashboard/summary")
         .then((res) => {
           setSummary(res.data);
           setError(null);
@@ -27,7 +27,7 @@ function App() {
         .catch((err) => setError(err.message));
 
       axios
-        .get("http://127.0.0.1:8000/dashboard/trend")
+        .get("https://donation-dashboard-production.up.railway.app/dashboard/trend")
         .then((res) => {
           const formatted = res.data.points.map((p) => ({
             date: p.date,
